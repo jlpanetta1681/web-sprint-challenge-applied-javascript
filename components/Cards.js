@@ -45,7 +45,7 @@ axios
         newImgContainer.setAttribute('class', 'img-container');
         authorImg.setAttribute('src', crrV.authorPhoto);
 
-        // console.log(crrV.headline)
+         console.log(crrV.headline)
         newHeadline.textContent = crrV.headline;
         authorSpan.textContent = crrV.authorName;
 
@@ -61,11 +61,11 @@ axios
         return getCardContainer.append(newCard)
       })
     }
-    // cardBuilder(response.data.articles.javascript);
-    // cardBuilder(response.data.articles.bootstrap);
-    // cardBuilder(response.data.articles.technology);
-    // cardBuilder(response.data.articles.jquery);
-    // cardBuilder(response.data.articles.node)
+     cardBuilder(response.data.articles.javascript);
+     cardBuilder(response.data.articles.bootstrap);
+     cardBuilder(response.data.articles.technology);
+     cardBuilder(response.data.articles.jquery);
+     cardBuilder(response.data.articles.node);
 
       for(const property in response.data.articles){
         console.log(property) ;
@@ -99,23 +99,19 @@ axios
 
         newAuthorContainer.appendChild(newImgContainer);
         newAuthorContainer.appendChild(authorSpan);
-
         newCard.appendChild(newHeadline);
         newCard.appendChild(newAuthorContainer);
-
+        
         const getCardContainer = document.querySelector('.cards-container')
         return getCardContainer.append(newCard)
-      })
-    }
-     cardBuilder(response.data.articles.javascript);
-     cardBuilder(response.data.articles.bootstrap);
-     cardBuilder(response.data.articles.technology);
-     cardBuilder(response.data.articles.jquery);
-     cardBuilder(response.data.articles.node)
+    })
+}
 
-      for(const property in response.data.articles){
-        console.log(property) ;
-        cardBuilder(response.data.articles[property]);
-      }
+
+for(const property in response.data.articles){
+    console.log(property) ;
+    cardBuilder(response.data.articles[property]);
+}
+debugger
 
   
