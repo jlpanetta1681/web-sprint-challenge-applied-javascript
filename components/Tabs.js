@@ -22,7 +22,6 @@ function Tab(arr){
 
 axios
 .get('https://lambda-times-api.herokuapp.com/topics')
-debugger
 .then(function(response){
     console.log(response.data.topics)
     return response.data.topics.map(crrV =>{
