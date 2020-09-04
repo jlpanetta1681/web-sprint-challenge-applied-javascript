@@ -30,13 +30,23 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is the DOM?
 
+The DOM is the document object model. I takes the files youcreate and renders them in html to the browser.
+
 2. What is an event?
+
+An event is something that occurs within the browser like loading pages or content, an also thing triggered on the front end by the user such as scrolling or clicking. basically anything that the dom reacts or responds too.
 
 3. What is an event listener?
 
+An event listener is a method that listens or watches for an event and then calls its callback function when an event its listening for is triggered.
+
 4. Why would we convert a NodeList into an Array?
 
+The nodelists have a limited amount of methods they can be used with. By converting the nodelist to an array we are then able to acces all the array methods it didnt have access to as a nodelist.
+
 5. What is a component?
+
+A componant is a way of writing  logic that is reuseable. Componants consit of classes that can pass data to and from eachother.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -46,12 +56,12 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 #### Repository Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: `git push origin <firstName-lastName>`
+- [x] Create a forked copy of this project
+- [x] Add your team lead as collaborator on Github
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [x] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [x] Push commits: `git push origin <firstName-lastName>`
 
 #### Launching the App
 
