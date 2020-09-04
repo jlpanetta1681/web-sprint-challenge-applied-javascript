@@ -13,17 +13,16 @@
 
 
 
-function Tab(arr){
-   const newTab = document.createElement("div");
-  newTab.setAttribute = ('class', 'tab');
-  newTab.textContent = "hi"
-                       
-                        }
+// function Tab(arr){
+//    const newTab = document.createElement("div");
+//   newTab.setAttribute = ('class', 'tab');
+//   newTab.textContent = "hi"
+//  }
 
 axios
 .get('https://lambda-times-api.herokuapp.com/topics')
 .then(function(response){
-    console.log(response.data.topics)
+    //console.log(response.data.topics)
     return response.data.topics.map(crrV =>{
         const newTab = document.createElement("div");
         newTab.setAttribute('class', 'tab');
@@ -35,6 +34,6 @@ axios
     })
     
 })
-.then(function(result){
-    console.log(result)
-})
+// .then(function(result){
+//     console.log(result)
+// })

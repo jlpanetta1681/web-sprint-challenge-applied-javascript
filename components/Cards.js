@@ -26,11 +26,11 @@ axios
     console.log(response.data.articles)
      response.data.articles.placeholder
      
-    
+  
 
     function cardBuilder(arr){
       return arr.map(crrV =>{
-          // console.log(crrV) 
+          console.log(crrV) 
 
         const newCard = document.createElement('div');
         const newHeadline = document.createElement('div');
@@ -61,11 +61,12 @@ axios
         return getCardContainer.append(newCard)
       })
     }
-     cardBuilder(response.data.articles.javascript);
-     cardBuilder(response.data.articles.bootstrap);
-     cardBuilder(response.data.articles.technology);
-     cardBuilder(response.data.articles.jquery);
-     cardBuilder(response.data.articles.node);
+   
+    //  cardBuilder(response.data.articles.javascript);
+    //  cardBuilder(response.data.articles.bootstrap);
+    //  cardBuilder(response.data.articles.technology);
+    //  cardBuilder(response.data.articles.jquery);
+    //  cardBuilder(response.data.articles.node);
 
       for(const property in response.data.articles){
         console.log(property) ;
@@ -76,8 +77,8 @@ axios
 
     function cardBuilder(arr){
       return arr.map(crrV =>{
-          // console.log(crrV) 
-
+         console.log(crrV) 
+         .card.addEventListener(click, () => {console.log(headline)} ) 
         const newCard = document.createElement('div');
         const newHeadline = document.createElement('div');
         const newAuthorContainer = document.createElement('div');
@@ -106,12 +107,15 @@ axios
         return getCardContainer.append(newCard)
     })
 }
-
+ cardBuilder(response.data.articles.javascript);
+    cardBuilder(response.data.articles.bootstrap);
+    cardBuilder(response.data.articles.technology);
+    cardBuilder(response.data.articles.jquery);
+    cardBuilder(response.data.articles.node)
 
 for(const property in response.data.articles){
     console.log(property) ;
     cardBuilder(response.data.articles[property]);
-}
-debugger
 
-  
+
+}
