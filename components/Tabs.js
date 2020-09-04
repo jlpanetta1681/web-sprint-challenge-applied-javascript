@@ -34,6 +34,6 @@ axios
     })
     
 })
-// .then(function(result){
-//     console.log(result)
-// })
+.then(function(result){
+     console.log(result)
+ })

@@ -73,49 +73,48 @@ axios
         cardBuilder(response.data.articles[property]);
       }
 
-  }) 
+  })
 
-    function cardBuilder(arr){
-      return arr.map(crrV =>{
-         console.log(crrV) 
-         .card.addEventListener(click, () => {console.log(headline)} ) 
-        const newCard = document.createElement('div');
-        const newHeadline = document.createElement('div');
-        const newAuthorContainer = document.createElement('div');
-        const newImgContainer = document.createElement('div');
-        const authorImg = document.createElement('img');
-        const authorSpan = document.createElement('span');
+ const cardMaker = (object) =>{
+    const card = document.createElement('div')
+    const headline = document.createElement('div')
+    const author = document.createElement('div')
+    const imgContainer = document.createElement('div')
+    const img = document.createElement('img')
+    const authorName = document.createElement('span')
 
-        newCard.setAttribute('class', 'card');
-        newHeadline.setAttribute('class', 'headline');
-        newAuthorContainer.setAttribute('class', 'author');
-        newImgContainer.setAttribute('class', 'img-container');
-        authorImg.setAttribute('src', crrV.authorPhoto);
+    headline.textContent = object.headline
+    img.src = object.authorPhoto
+    authorName.textContent = object.authorName
 
-         console.log(crrV.headline)
-        newHeadline.textContent = crrV.headline;
-        authorSpan.textContent = crrV.authorName;
+    card.className = 'card'
+    headline.className = 'headline'
+    author.className = 'author'
+    imgContainer.className = 'img-container'
 
-        newImgContainer.appendChild(authorImg)
+    card.appendChild(headline)
+    card.appendChild(author)
+    author.appendChild(imgContainer)
+    imgContainer.appendChild(img)
+    author.appendChild(authorName)
 
-        newAuthorContainer.appendChild(newImgContainer);
-        newAuthorContainer.appendChild(authorSpan);
-        newCard.appendChild(newHeadline);
-        newCard.appendChild(newAuthorContainer);
-        
-        const getCardContainer = document.querySelector('.cards-container')
-        return getCardContainer.append(newCard)
+    card.addEventListener('click', () => {
+        console.log(obj.headline)
     })
+
+    return card
 }
- cardBuilder(response.data.articles.javascript);
-    cardBuilder(response.data.articles.bootstrap);
-    cardBuilder(response.data.articles.technology);
-    cardBuilder(response.data.articles.jquery);
-    cardBuilder(response.data.articles.node)
 
-for(const property in response.data.articles){
-    console.log(property) ;
-    cardBuilder(response.data.articles[property]);
+const errorMessages = (errors) => {
+    const error = document.createElement('div')
+    const status = document.createElement('h3')
+    const headers = document.createElement('p')
 
+    status.textContent = `Error ${errors.response.status} ${errors.response.request.statusText}`
+    headers.textContent = error.message
 
-}
+    errors.appendChild(status)
+    errors.appendChild(headers)
+
+    return errors
+}   
